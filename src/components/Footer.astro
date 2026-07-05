@@ -1,0 +1,20 @@
+---
+import { siteContent } from "../data/siteContent";
+---
+<footer class="bg-stone-950 w-full py-16 px-8 border-t border-stone-800/20 surface-container-lowest">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+    <div class="text-lg font-serif text-orange-200">
+      {siteContent.footer.brandName}
+    </div>
+    <div class="flex gap-8 font-sans text-xs tracking-widest inter text-stone-500">
+      {siteContent.footer.links.map((link) => (
+        <a class="hover:text-orange-200 underline-offset-4 decoration-orange-200/50 opacity-80 transition-opacity" href={link.href}>
+          {link.label}
+        </a>
+      ))}
+    </div>
+    <div class="text-stone-500 font-sans text-xs tracking-widest inter text-center md:text-right">
+      © {new Date().getFullYear()} {siteContent.footer.copyrightSuffix}
+    </div>
+  </div>
+</footer>

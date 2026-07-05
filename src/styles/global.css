@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-on-secondary: #370096;
+  --color-on-primary-fixed-variant: #852219;
+  --color-on-tertiary: #532200;
+  --color-secondary: #cdbdff;
+  --color-on-primary: #650905;
+  --color-surface: #131313;
+  --color-inverse-surface: #e5e2e1;
+  --color-secondary-fixed-dim: #cdbdff;
+  --color-on-tertiary-fixed-variant: #763300;
+  --color-inverse-primary: #a63a2d;
+  --color-on-error-container: #ffdad6;
+  --color-on-error: #690005;
+  --color-tertiary-container: #4d1f00;
+  --color-on-tertiary-fixed: #331200;
+  --color-error: #ffb4ab;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-on-surface-variant: #d8c2bf;
+  --color-primary-fixed: #ffdad5;
+  --color-background: #131313;
+  --color-surface-bright: #393939;
+  --color-on-secondary-container: #c0acff;
+  --color-outline: #a08c8a;
+  --color-surface-tint: #ffb4a9;
+  --color-tertiary-fixed: #ffdbc9;
+  --color-secondary-container: #5203d5;
+  --color-on-primary-container: #eb6d5d;
+  --color-on-tertiary-container: #e3762e;
+  --color-inverse-on-surface: #313030;
+  --color-error-container: #93000a;
+  --color-tertiary-fixed-dim: #ffb68d;
+  --color-surface-variant: #353534;
+  --color-primary-container: #600503;
+  --color-secondary-fixed: #e8deff;
+  --color-on-background: #e5e2e1;
+  --color-outline-variant: #534341;
+  --color-tertiary: #ffb68d;
+  --color-surface-container: #201f1f;
+  --color-primary: #ffb4a9;
+  --color-on-secondary-fixed: #20005f;
+  --color-surface-dim: #131313;
+  --color-surface-container-low: #1c1b1b;
+  --color-primary-fixed-dim: #ffb4a9;
+  --color-on-secondary-fixed-variant: #4f00d0;
+  --color-on-surface: #e5e2e1;
+  --color-on-primary-fixed: #410000;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-high: #2a2a2a;
+
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .noto-serif {
+    font-family: var(--font-headline);
+  }
+  
+  .inter {
+    font-family: var(--font-body);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  }
+}

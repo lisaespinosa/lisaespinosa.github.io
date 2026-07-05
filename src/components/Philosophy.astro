@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import sheetMusic from "../assets/sheet_music.jpg";
+import { siteContent } from "../data/siteContent";
+---
+<section class="py-24 bg-surface-container-low" id="philosophy">
+  <div class="container mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1">
+        <h2 class="text-4xl md:text-5xl noto-serif font-bold mb-8 text-primary">{siteContent.philosophy.title}</h2>
+        <p class="text-lg text-on-surface-variant mb-10 leading-relaxed">
+          {siteContent.philosophy.description}
+        </p>
+        <ul class="space-y-6">
+          {siteContent.philosophy.items.map((item) => (
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-tertiary mt-1">{item.icon}</span>
+              <div>
+                <h4 class="text-xl font-bold mb-1">{item.title}</h4>
+                <p class="text-on-surface-variant">{item.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="order-1 lg:order-2 relative">
+        <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+          <Image src={sheetMusic} alt="Sheet Music" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-8 -left-8 bg-surface-container-highest p-8 rounded-xl hidden md:block border border-outline-variant/20">
+          <span class="text-5xl noto-serif italic text-primary block mb-2">{siteContent.philosophy.stat.value}</span>
+          <span class="text-xs uppercase tracking-widest text-on-surface-variant inter">{siteContent.philosophy.stat.label}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+import { siteContent } from "../data/siteContent";
+---
+<section class="py-24 bg-surface" id="pricing">
+  <div class="container mx-auto px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl noto-serif font-bold mb-4">{siteContent.pricing.title}</h2>
+      <p class="text-on-surface-variant max-w-2xl mx-auto">{siteContent.pricing.subtitle}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {siteContent.pricing.tiers.map((tier) => (
+        <div class={tier.isRecommended 
+          ? "bg-primary-container p-10 rounded-xl flex flex-col items-center text-center relative transition-transform hover:-translate-y-2 border border-primary/20"
+          : "bg-surface-container-high p-10 rounded-xl flex flex-col items-center text-center transition-transform hover:-translate-y-2"
+        }>
+          {tier.isRecommended && (
+            <div class="absolute -top-3 bg-tertiary text-on-tertiary text-[10px] font-bold px-3 py-1 rounded-full uppercase">Recommended</div>
+          )}
+          <span class={tier.isRecommended 
+            ? "text-sm uppercase tracking-tighter text-on-primary-container mb-4" 
+            : "text-sm uppercase tracking-tighter text-on-surface-variant mb-4"
+          }>
+            {tier.category}
+          </span>
+          <h3 class={tier.isRecommended 
+            ? "text-2xl font-bold mb-2 text-primary" 
+            : "text-2xl font-bold mb-2"
+          }>
+            {tier.duration}
+          </h3>
+          <div class={tier.isRecommended 
+            ? "text-4xl noto-serif text-on-primary-container mb-6" 
+            : "text-4xl noto-serif text-primary mb-6"
+          }>
+            {tier.price}
+            <span class={tier.isRecommended 
+              ? "text-sm font-sans opacity-70" 
+              : "text-sm text-on-surface-variant font-sans"
+            }>
+              {tier.unit}
+            </span>
+          </div>
+          <p class={tier.isRecommended 
+            ? "text-on-primary-container text-sm mb-8" 
+            : "text-on-surface-variant text-sm mb-8"
+          }>
+            {tier.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
