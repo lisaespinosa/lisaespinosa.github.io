@@ -119,7 +119,7 @@ export const siteContent: SiteContent = {
   },
   philosophy: {
     title: "A Personalized Approach to Learning",
-    description: "I believe that learning an instrument is a journey of discovery. My studio provides a supportive, high-performance environment where students are encouraged to explore their musical voice while maintaining a disciplined focus on the mechanics of string playing.",
+    description: "My studio provides a supportive environment where students are encouraged to discover their unique musical voice and develop the technical foundation needed to bring that voice to life.",
     items: [
       {
         icon: "vibration",
@@ -171,7 +171,7 @@ export const siteContent: SiteContent = {
     },
     environment: {
       title: "Studio Environment",
-      description: "Lessons take place in my dedicated Santa Rosa home studio, designed for optimal acoustics. Online lessons via high-definition Zoom audio are also available worldwide.",
+      description: "Lessons take place in my Santa Rosa home studio. Online lessons via high-definition Zoom audio are also available.",
       location: "Santa Rosa, CA"
     }
   },
@@ -181,14 +181,14 @@ export const siteContent: SiteContent = {
     description: "With over a decade of dedicated teaching and performance experience, I bring a wealth of knowledge to every lesson, ensuring each student receives high-caliber instruction.",
     highlights: [
       { icon: "workspace_premium", text: "Master's in Music Performance" },
-      { icon: "verified", text: "Pedagogy Certificate" },
+      { icon: "verified", text: "Certificate of Cello Pedagogy" },
       { icon: "calendar_month", text: "10+ Years Professional Experience" },
       { icon: "public", text: "Global Teaching Background" }
     ]
   },
   pricing: {
     title: "Lesson Details",
-    subtitle: "Investment in your musical future. All new students start with a complimentary 15-minute consultation.",
+    subtitle: "Students of all ages and experience levels are welcome. Each lesson is thoughtfully tailored to the individual, balancing technical development with meaningful musical growth.",
     tiers: [
       {
         category: "Introductory",
