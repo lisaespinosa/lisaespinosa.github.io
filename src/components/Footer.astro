@@ -6,13 +6,7 @@ import { siteContent } from "../data/siteContent";
     <div class="text-lg font-serif text-orange-200">
       {siteContent.footer.brandName}
     </div>
-    <div class="flex gap-8 font-sans text-xs tracking-widest inter text-stone-500">
-      {siteContent.footer.links.map((link) => (
-        <a class="hover:text-orange-200 underline-offset-4 decoration-orange-200/50 opacity-80 transition-opacity" href={link.href}>
-          {link.label}
-        </a>
-      ))}
-    </div>
+
     <div class="text-stone-500 font-sans text-xs tracking-widest inter text-center md:text-right">
       © {new Date().getFullYear()} {siteContent.footer.copyrightSuffix}
     </div>

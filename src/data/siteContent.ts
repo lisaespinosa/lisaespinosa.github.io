@@ -67,8 +67,8 @@ export interface SiteContent {
     title: string;
     description: string;
     details: {
-      email: string;
       location: string;
+      web3FormsAccessKey?: string;
     };
     form: {
       nameLabel: string;
@@ -84,7 +84,6 @@ export interface SiteContent {
   };
   footer: {
     brandName: string;
-    links: Array<{ label: string; href: string }>;
     copyrightSuffix: string;
   };
 }
@@ -208,7 +207,8 @@ export const siteContent: SiteContent = {
     title: "Get Started",
     description: "Whether you’re new to cello or looking to continue your studies, I am excited to help you achieve your musical goals. Fill out the form below, and I will reach out within 48 hours to schedule your consultation.",
     details: {
-      location: "Santa Rosa, California (Home Studio)"
+      location: "Santa Rosa, California (Home Studio)",
+      web3FormsAccessKey: "d9ed4406-07b9-4346-bf66-904efc63d6ab"
     },
     form: {
       nameLabel: "Name",
@@ -224,11 +224,6 @@ export const siteContent: SiteContent = {
   },
   footer: {
     brandName: "The Cello Studio",
-    links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Studio Guidelines", href: "#" },
-      { label: "FAQ", href: "#" }
-    ],
-    copyrightSuffix: "The Digital Virtuoso. Santa Rosa & Online Instruction."
+    copyrightSuffix: "Lisa Espinosa. All rights reserved."
   }
 };
