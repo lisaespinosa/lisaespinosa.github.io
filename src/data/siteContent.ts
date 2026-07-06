@@ -58,12 +58,9 @@ export interface SiteContent {
     title: string;
     subtitle: string;
     tiers: Array<{
-      category: string;
       duration: string;
       price: string;
       unit: string;
-      description: string;
-      isRecommended?: boolean;
     }>;
   };
   contact: {
@@ -191,26 +188,19 @@ export const siteContent: SiteContent = {
     subtitle: "Investment in your musical future. All new students start with a complimentary 15-minute consultation.",
     tiers: [
       {
-        category: "Introductory",
         duration: "30 Minutes",
         price: "$45",
-        unit: "/session",
-        description: "Ideal for young beginners or those with busy schedules."
+        unit: "/session"
       },
       {
-        category: "Standard",
         duration: "45 Minutes",
         price: "$65",
-        unit: "/session",
-        description: "The perfect balance for intermediate students to refine technique.",
-        isRecommended: true
+        unit: "/session"
       },
       {
-        category: "Advanced",
         duration: "60 Minutes",
         price: "$80",
-        unit: "/session",
-        description: "Comprehensive deep-dive for advanced players and audition prep."
+        unit: "/session"
       }
     ]
   },
